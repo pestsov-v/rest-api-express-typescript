@@ -1,12 +1,6 @@
-import logger from 'pino'
+const pino = require('pino')
+const pretty = require('pino-pretty')
 
-const log = logger({
-    transport: {
-        target: 'pino-pretty',
-    },
-    base: {
-        pid: false
-    },
-})
+const log = pino(pretty())
 
-export default log
+export default log;
