@@ -18,8 +18,8 @@ function routes (app: Express) {
 
     app.post('/api/products', [requireUser, validateResourse(createProductSchema)], createProductHandler)
     app.put('/api/products/:productId', [requireUser, validateResourse(updateProductSchema)], createProductHandler)
-    app.get('/api/products/:productId', [requireUser, validateResourse(getProductSchema)], getProductHandler)
+    app.get('/api/products/:productId', [validateResourse(getProductSchema)], getProductHandler)
     app.delete('/api/products/:productId', [requireUser, validateResourse(deleteProductSchema)], deleteProductHandler)
 }
 
-export default routes
+export default routes 

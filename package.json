@@ -8,7 +8,9 @@
 
   "scripts": {
 
-    "dev": "ts-node-dev --respawn --transpile-only src/app.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+
+    "test": "jest --watchAll"
 
   },
 
@@ -27,6 +29,8 @@
     "jsonwebtoken": "^8.5.1",
 
     "lodash": "^4.17.21",
+
+    "mongodb-memory-server": "^8.5.2",
 
     "mongoose": "^6.3.3",
 
